@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        h1 {
+          color: RoyalBlue;
+          text-align: center;
+        } 
+        
+        
+        </style>
+<head>
+    <meta charset="UTF-8">
+    <title>patient details</title>
+</head>
+<body style="background-color:MintCream;">
+<h1>A new patient details</h1>
+<form method="POST" action="/addPatient">
+
+    <!-- First name-->
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required>
+
+    <!-- Last namet-->
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required><br>
+
+    <!-- Adress-->
+
+    <!---<div class="form-group">
+    <label >City</label>
+    <select id="city"></select>
+    </div>--->
+
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" pattern="[A-Za-z]{3}+" title="Enter at least three letters" required >
+
+    <label for="street">Street:</label>
+    <input type="text" id="street" name="street" pattern="[A-Za-z]{3}+" title="Enter at least three letters" required >
+
+    <label for="houseNumber">house Number:</label>
+    <input type="text" id="houseNumber" name="houseNumber" pattern="[0-9]+" title="Enter at least three digits" required><br>
+
+
+    <!-- Id number-->
+    <label for="id">ID:</label>
+    <input type="text" id="id" name="id" pattern="[0-9]{9}" title="Enter nine digits" required><br>
+
+    <!-- Birthday-->
+    <label for="birthday">Birthday:</label>
+    <input type="date" id="birthday" name="birthday" value="2000-07-21"><br>
+
+    <!-- phone number-->
+    <label for="phone">Phone:</label>
+    <input type="phone" id="phone" name="phone" pattern="[0-9]{10}" title="Ten digit for number phone" required> 
+
+    <!-- tel number-->
+    <label for="tel">Mobile:</label>
+    <input type="tel" id="tel" name="tel" pattern="[0-9]{9}"><br>
+<!-- tel number-->
+    <hr>
+
+    <label for="vaccDate1">Vaccine Date:</label>
+    <input type="date" id="vaccDate1" name="vaccDate1" ><br>
+
+    <label for="vaccManufacturer1">Vaccine 1 Manufacturer:</label>
+    <input type="text" id="vaccManufacturer1" name="vaccManufacturer1" ><br>
+
+    <label for="vaccDate2">Vaccine 2 Date:</label>
+    <input type="date" id="vaccDate2" name="vaccDate2" ><br>
+
+    <label for="vaccManufacturer2">Vaccine 2 Manufacturer:</label>
+    <input type="text" id="vaccManufacturer2" name="vaccManufacturer2" ><br>
+
+    <label for="vaccDate3">Vaccine Date:</label>
+    <input type="date" id="vaccDate3" name="vaccDate3" ><br>
+
+    <label for="vaccManufacturer3">Vaccine 1 Manufacturer:</label>
+    <input type="text" id="vaccManufacturer3" name="vaccManufacturer3" ><br>
+
+    <label for="vaccDate4">Vaccine 2 Date:</label>
+    <input type="date" id="vaccDate4" name="vaccDate4"><br>
+
+    <label for="vaccManufacturer4">Vaccine 2 Manufacturer:</label>
+    <input type="text" id="vaccManufacturer4" name="vaccManufacturer4" ><br>
+
+    <label for="positiveTestDate">Positive Test Date:</label>
+    <input type="date" id="positiveTestDate" name="positiveTestDate"><br>
+
+    <label for="recoveryDate">Recovery Date:</label>
+    <input type="date" id="recoveryDate" name="recoveryDate" ><br>
+
+
+    <button type="submit" class="glyphicon glyphicon-send" >add patient</button>
+    <!---<input type="submit" value="Submit">--->
+</form>
+</body>
+</html>
+
+
+
+<!---<script>
+  const citiesArray =['eilat',
+      'jerusalem',
+      'nazareth' ,
+      'haifa',
+      'zikhron ya’akov ',
+      'arad',
+      'netanya',
+      'nahariya',
+      'kfar tavor',
+      'hebron',
+      'kinneret moshava',
+      'holon',
+      'bat shlomo',
+      'bnei brak' ,
+      'the negev desert ',
+      'the lowlands',
+      'abu snan',
+      'julis',
+      'maghar',
+      'samia',
+      'ein al-assad',
+      'isfiya',
+      'keysarya' ,
+      'beer sheva',
+      'sde boker',
+      'yad moredechai',
+      'rosh-pina' ,
+      'kiryat shmona',
+      'kiryat malachi',
+      'ein gedi',
+      'ein-hod' ,
+      ' kfar nakhum',
+      ' hazor haglilit',
+      'metula' ,
+      'harduf',
+      'ashdod',
+      'kfar kama',
+      'abu gosh' ,
+      'jezreel valley',
+      ' the judean desert',
+      'sea of galilee',
+      'beit jann',
+      'sajur',
+      'rameh',
+      'daliyat el-carmel',
+      'the golan heights',
+      'tiberias',
+      'mitspe ramon',
+      'akko',
+      'katzerin',
+      'nahalal',
+      'kfar yasif',
+      'hanita',
+      'maalot tarshiha',
+      'bat yam',
+      'the hula valley' ,
+      'hevel habsor',
+      'the arava',
+      'the galilee',
+      'gush dan',
+      'the nitzana region',
+      'yanuh',
+      'yarka',
+      'kisra',
+      'hurfeish',
+      'shefa-amr',
+      'the dead sea',
+      'tel aviv jaffa',
+      'tsefat' ,
+      'tel-hai ',
+      'ramla',
+      'hertzeliya' ,
+      'gush halav',
+      'ashkelon' ,
+      'beit shean' ,
+      'cana' ,
+      'jatt',
+      'rehaniya',
+      'degania']
+  function selectOne() {
+      var select = document.getElementById('city')
+      for (var i=citiesArray.length-1; i>=0; i--) {
+          var x= citiesArray[i].charAt(0).toUpperCase() + citiesArray[i].slice(1);
+          select.options[select.options.length] = new Option(x, citiesArray[i])
+      }
+  }
+  selectOne()
+</script>--->
