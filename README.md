@@ -27,6 +27,9 @@ search page:
 
 <img width="252" alt="search" src="https://github.com/Shaked1/hospitalDB/assets/66208625/856b326d-c1d6-444e-b49b-e0f10c9fea37">
 
+no found page:
+
+<img width="299" alt="error page" src="https://github.com/Shaked1/hospitalDB/assets/66208625/4db86b26-a3e7-4686-81c8-108f9d97f3e6">
 
 
 ## author
