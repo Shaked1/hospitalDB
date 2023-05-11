@@ -17,6 +17,8 @@ home page:
 
 
 add patient page:
+<img width="635" alt="add" src="https://github.com/Shaked1/hospitalDB/assets/66208625/9ebc3dcb-3860-4412-993d-fbc3fa0e4e0c">
+
 
 
 find page:
